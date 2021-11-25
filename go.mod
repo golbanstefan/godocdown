@@ -1,3 +1,3 @@
-module github.com/golbanstefan/godocdown/godocdown
+module github.com/golbanstefan/godocdown
 
 go 1.17

@@ -48,13 +48,13 @@ func renderTypeSectionTo(writer io.Writer, list []*doc.Type) {
 }
 
 func renderHeaderTo(writer io.Writer, document *_document) {
-	fmt.Fprintf(writer, "# %s\n--\n", document.Name)
+	fmt.Fprintf(writer, "# %s \n", document.Name)
 
 	if !document.IsCommand {
 		// Import
 		if RenderStyle.IncludeImport {
 			if document.ImportPath != "" {
-				fmt.Fprintf(writer, spacer(4)+"import \"%s\"\n\n", document.ImportPath)
+				fmt.Fprintf(writer, spacer(4)+" \n ``` import \"%s\" ``` \n\n", document.ImportPath)
 			}
 		}
 	}
@@ -83,6 +83,6 @@ func renderUsageTo(writer io.Writer, document *_document) {
 
 func renderSignatureTo(writer io.Writer) {
 	if RenderStyle.IncludeSignature {
-		fmt.Fprintf(writer, "\n\n--\n**godocdown** http://github.com/robertkrimen/godocdown\n")
+		fmt.Fprintf(writer, "\n\n\n--\n**godocdown** http://github.com/robertkrimen/godocdown\n")
 	}
 }
