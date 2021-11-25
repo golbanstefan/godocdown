@@ -28,14 +28,14 @@ func testImportPath(target, want string) {
 func TestGuessImportPath(t *testing.T) {
 	Terst(t)
 
-	testImportPath("./example", "github.com/robertkrimen/godocdown/godocdown/example")
+	testImportPath("./example", "github.com/golbanstefan/godocdown/godocdown/example")
 	testImportPath("../example", "github.com/robertkrimen/godocdown/example")
 	if filepath.Separator == '/' {
 		// This test does not work well on windows
 		testImportPath("/not/in/GOfromSlash", "")
 	}
-	testImportPath("in/GOfromSlash", "github.com/robertkrimen/godocdown/godocdown/in/GOfromSlash")
-	testImportPath(".", "github.com/robertkrimen/godocdown/godocdown")
+	testImportPath("in/GOfromSlash", "github.com/golbanstefan/godocdown/godocdown/in/GOfromSlash")
+	testImportPath(".", "github.com/golbanstefan/godocdown/godocdown")
 	testImportPath("../example/example", "github.com/robertkrimen/godocdown/example/example")
 }
 

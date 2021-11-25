@@ -3,7 +3,7 @@
 package main
 
 import (
-	Dbg "github.com/robertkrimen/godocdown/godocdown/dbg"
+	Dbg "github.com/golbanstefan/godocdown/godocdown/dbg"
 )
 
 var dbg, dbgf = Dbg.New()

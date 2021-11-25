@@ -3,7 +3,7 @@
 package main
 
 import (
-	Kilt "github.com/robertkrimen/godocdown/godocdown/kilt"
+	Kilt "github.com/golbanstefan/godocdown/godocdown/kilt"
 )
 
 var kilt = Kilt.New()
